@@ -23,10 +23,10 @@ const DeleteModule = ({setIsDeleteOpen,listItem,updatedList}) => {
                     <div onClick={handleCancelButton}><IoCloseOutline size={25} className='cursor-pointer' /></div>
                 </div>           
                 <div className='flex gap-3 justify-end mt-6'>
-                    <button onClick={handleCancelButton} className='form px-5 py-3 text-gray-600 text-base font-semibold rounded-md border border-gray-300 hover:border-gray-400 hover:text-gray-700 form'>
+                    <button onClick={handleCancelButton} className='form px-5 py-3 text-gray-600 text-base font-medium rounded-md border border-gray-300 hover:border-gray-400 hover:text-gray-700 form'>
                         Cancel
                     </button>
-                    <button onClick={handleDeleteButton} className='form px-5 py-3 text-white text-base font-semibold rounded-md bg-green-800 form'>
+                    <button onClick={handleDeleteButton} className='form px-5 py-3 text-white text-base font-medium rounded-md bg-green-800 form'>
                         yes
                     </button>
                 </div>

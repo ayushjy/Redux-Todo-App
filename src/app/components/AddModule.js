@@ -66,16 +66,16 @@ const AddModule = ({ setAddlist }) => {
                 <div className='flex flex-col gap-2 mt-6'>
                     <div className='font-semibold form'>Status</div>
                     <div className='space-x-4'>
-                        <button onClick={handleStatusChange('Completed')} className='px-5 py-3 text-white text-base font-semibold rounded-md bg-red-600 hover:bg-red-700 form'>Completed</button>
-                        <button onClick={handleStatusChange('Progress')} className='px-5 py-3 text-white text-base font-semibold rounded-md bg-yellow-400 hover:bg-yellow-500 form'>Progress</button>
-                        <button onClick={handleStatusChange('Pending')} className='px-5 py-3 text-white text-base font-semibold rounded-md bg-green-400 hover:bg-green-500 form'>Pending</button>
+                        <button onClick={handleStatusChange('Pending')} className='px-5 py-3 text-white text-base font-medium rounded-md bg-red-600 hover:bg-red-700 form'>Pending</button>
+                        <button onClick={handleStatusChange('Progress')} className='px-5 py-3 text-white text-base font-medium rounded-md bg-yellow-400 hover:bg-yellow-500 form'>Progress</button>
+                        <button onClick={handleStatusChange('Completed')} className='px-5 py-3 text-white text-base font-medium rounded-md bg-green-400 hover:bg-green-500 form'>Completed</button>
                     </div>
                 </div>
                 <div className='flex gap-3 justify-end mt-6'>
                     <button onClick={handleCloseButton} className='form px-5 py-3 text-gray-600 text-base font-semibold rounded-md border border-gray-300 hover:border-gray-400 hover:text-gray-700'>
                         Cancel
                     </button>
-                    <button onClick={handleAddButton} className='form px-5 py-3 text-white text-base font-semibold rounded-md bg-green-800'>
+                    <button onClick={handleAddButton} className='form px-5 py-3 text-white text-base font-medium rounded-md bg-green-700 hover:bg-green-800'>
                         Add
                     </button>
                 </div>

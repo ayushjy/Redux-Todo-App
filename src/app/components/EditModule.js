@@ -4,9 +4,12 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useAppDispatch,useAppSelector } from '../../../lib/hooks';
 import { update } from '../../../lib/features/list/listSlice';
 
-const EditModule = ({id,setIsEditOpen,updateTodo,setUpdateTodo}) => {  
-    const [listName, setListName] = useState('');
-    const [description, setDescription] = useState('');
+const EditModule = ({id,setIsEditOpen}) => {  
+    const existingList = useAppSelector((state) => state.list.list);
+    const existinglistName=existingList[0].listName;
+    const existingDesc=existingList[0].description;
+    const [listName, setListName] = useState(existinglistName);
+    const [description, setDescription] = useState(existingDesc);
     const [status, setStatus] = useState(''); 
 
     const dispatch = useAppDispatch();
@@ -66,16 +69,16 @@ const EditModule = ({id,setIsEditOpen,updateTodo,setUpdateTodo}) => {
                 <div className='flex flex-col gap-2 mt-6'>
                     <div className='font-semibold formform '>Status</div>
                     <div className='space-x-4'>
-                        <button onClick={handleStatusChange('Active')} className='px-5 py-3 text-white text-base font-semibold rounded-md bg-red-600 hover:bg-red-700 form'>Active</button>
-                        <button onClick={handleStatusChange('Progress')} className='px-5 py-3 text-white text-base font-semibold rounded-md bg-yellow-400 hover:bg-yellow-500 form'>Progress</button>
-                        <button onClick={handleStatusChange('Pending')} className='px-5 py-3 text-white text-base font-semibold rounded-md bg-green-400 hover:bg-green-500 form'>Pending</button>
+                        <button onClick={handleStatusChange('Completed')} className='px-5 py-3 text-white text-base font-medium rounded-md bg-green-400 hover:bg-green-600 form'>Completed</button>
+                        <button onClick={handleStatusChange('Progress')} className='px-5 py-3 text-white text-base font-medium rounded-md bg-yellow-400 hover:bg-yellow-500 form'>Progress</button>
+                        <button onClick={handleStatusChange('Pending')} className='px-5 py-3 text-white text-base font-medium rounded-md bg-red-600 hover:bg-red-700 form'>Pending</button>
                     </div>
                 </div>
                 <div className='flex gap-3 justify-end mt-6'>
                     <button onClick={handleCloseButton} className='form px-5 py-3 text-gray-600 text-base font-semibold rounded-md border border-gray-300 hover:border-gray-400 hover:text-gray-700'>
                         Cancel
                     </button>
-                    <button onClick={handleEditButton} className='form px-5 py-3 text-white text-base font-semibold rounded-md bg-green-800'>
+                    <button onClick={handleEditButton} className='form px-5 py-3 text-white text-base font-medium rounded-md bg-green-700 hover:bg-green-800'>
                         Edit
                     </button>
                 </div>

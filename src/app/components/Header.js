@@ -36,12 +36,12 @@ const Header = ({setAddlist}) => {
       {isAddOpen && (
         <div  className='absolute bg-white top-28 right-36 w-64 px-4 py-3 flex flex-col justify-center gap-5 shadow-2xl rounded-md z-20'>
           <div onClick={AddTodo} className='flex gap-2 items-center cursor-pointer'>
-            <div className='logo'><BsListTask size={20} /></div>
-            <div className='logo text-lg'>Add ToDo</div>
+            <div className='form'><BsListTask size={20} /></div>
+            <div className='form text-lg'>Add ToDo</div>
           </div>
           <div onClick={ResetTodo} className='flex gap-2 items-center cursor-pointer'>
-            <div className='logo'><RiDeleteBinLine size={20} /></div>
-            <div className='logo text-lg'>Reset</div>
+            <div className='form'><RiDeleteBinLine size={20} /></div>
+            <div className='form text-lg'>Reset</div>
           </div>
         </div>
       )}

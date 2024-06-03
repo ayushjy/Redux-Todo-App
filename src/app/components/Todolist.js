@@ -29,34 +29,34 @@ const Todolist = ({ listItem }) => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Completed':
-        return 'text-green-600';
+        return 'text-[#015249]';
       case 'Pending':
-        return 'text-red-600';
+        return 'text-[#B82601]';
       case 'Progress':
-        return 'text-yellow-400';
+        return 'text-[#F9BE02]';
     }
   };
 
   return (
     <div>
-      <div className='relative flex justify-between bg-slate-400 border border-gray-200 px-4 py-5 my-2 rounded-md z-10'>
+      <div className='relative flex justify-between bg-[#4ABDAC]  px-4 py-5 my-2 rounded-lg z-10 hover:shadow-zinc-800	'>
         <div className='flex flex-col gap-3 items-start'>
-          {listItem.listName && (<div className='font-bold  text-gray-800 text-2xl form'>{listItem.listName}</div>)}
-          {listItem.description && (<div className='font-semibold text-slate-200 desc'>{listItem.description}</div>)}
-          {listItem.status && <div className='font-semibold text-slate-200 desc'>Status: <span className={`${getStatusColor(listItem.status)}`} >{listItem.status}</span></div>}
+          {listItem.listName && (<div className='font-bold  text-slate-100 text-2xl form'>{listItem.listName}</div>)}
+          {listItem.description && (<div className='font-medium text-slate-200 text-lg desc'><span className='text-[#E5E338]'>Desc:</span> {listItem.description}</div>)}
+          {listItem.status && <div className='font-medium text-lg desc'><span className='text-[#E5E338]'>Status:</span> <span className={`${getStatusColor(listItem.status)}`} >{listItem.status}</span></div>}
         </div>
-        <div onClick={handleDotButton} className='cursor-pointer'>
+        <div onClick={handleDotButton} className='cursor-pointer text-slate-200'>
           <BsThreeDotsVertical size={20} />
         </div>
         {isDotOpen && (
           <div className='absolute bg-white top-12 right-0 w-56 px-4 py-3 flex flex-col justify-center gap-5 shadow-2xl rounded-md z-30'>
             <div className='flex gap-2 items-center text-gray-500 cursor-pointer' onClick={handleEditClick}>
               <MdDriveFileRenameOutline size={20} />
-              <div>Update</div>
+              <div className='form'>Update</div>
             </div>
             <div className='flex gap-2 items-center text-red-500 cursor-pointer' onClick={handleDeleteClick}>
               <RiDeleteBinLine size={20} />
-              <div>Delete</div>
+              <div className='form'>Delete</div>
             </div>
           </div>
         )}

@@ -4,7 +4,7 @@ import React from 'react'
 const Background = () => {
     return (
         <div>
-            <div className='flex flex-col gap-6 justify-center items-center h-full py-24'>
+            <div className='flex flex-col gap-6 justify-center items-center h-full py-12'>
                 <div className=''>
                     <img src="/img/background-image.png" alt="stuff" className='w-80' />
                 </div>
