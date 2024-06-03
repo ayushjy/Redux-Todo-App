@@ -27,7 +27,7 @@ const Header = ({setAddlist}) => {
 
   return (
     <div className='flex justify-between pb-12'>
-      <div className='text-2xl font-bold form'>Redux ToDo App</div>
+      <div className='text-2xl text-[#ff5722] font-bold form'>Redux ToDo App</div>
       <div onClick={handleAddButton} className='flex rounded gap-1 px-2 py-2 justify-center items-center bg-red-700 cursor-pointer'>
         <div className='text-white'><IoAddOutline size={20} /></div>
         <div className='text-white form text-lg'>Add</div>

@@ -10,7 +10,7 @@ const page = () => {
   const [addlist, setAddlist] = useState(false);
   const lists = useAppSelector((state) => state.list.list);
   return (
-    <div className={`px-36 py-16 overflow-y-hidden bg-[#99D3DF] ${lists.length<=3?`h-screen`:`h-full`}`}>
+    <div className={`px-36 py-16 overflow-y-hidden bg-[#f9f7f7] ${lists.length<=3?`h-screen`:`h-full`}`}>
       <Header addlist={addlist} setAddlist={setAddlist}/>
       {(lists.length===0)&&
       <Background/>}
