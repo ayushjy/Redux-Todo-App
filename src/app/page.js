@@ -10,7 +10,7 @@ const page = () => {
   const [addlist, setAddlist] = useState(false);
   const lists = useAppSelector((state) => state.list.list);
   return (
-    <div className='px-36 py-16 bg-slate-300 h-screen'>
+    <div className='px-36 py-16 bg-slate-300 h-full'>
       <Header addlist={addlist} setAddlist={setAddlist}/>
       {(lists.length===0)&&<Background/>}
 
